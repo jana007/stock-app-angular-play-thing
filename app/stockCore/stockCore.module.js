@@ -1,14 +1,16 @@
-angular
-	.module("app.stockCore", [
-		// Angular Modules
-		// "ngRoute",
+(function() {
+  'use strict';
 
-		// "3rd Party Module",
-		// "breeze.angular",
-		// "ui.bootstrap",
+  angular.module('app.stockCore', [
+    // Angular Modules
+    // 'ngRoute',
 
-		// "custom cross app modules",
-		// "crossapp.logger",
-		// "crossapp.exceptions",
+    // 3rd Party Modules
+    // 'breeze.angular',
+    // 'ui.bootstrap,
 
-	]);
+    // Custom Cross App Modules
+    // 'crossapp.logger',
+    // 'crossapp.exceptions',
+  ]);
+})();

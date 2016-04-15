@@ -4,24 +4,33 @@
 		<title>Stock app</title>
 		<meta charset = "utf-8" />
 		<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-		<script>
-
-
-		</script>
 	</head>
-	<body ng-app>
+	<body>
 		<h1>This is the dopest stock app, y'all</h1>
-		<div>
-
-
+		<div ng-app = "app">
+			<!--div ng-controller = "StockDetails as vm"> {{vm.message}} </div>
+			<div ng-controller = "StockList    as vm"> {{vm.message}} </div-->
+			<div ng-controller = "StockList    as vm">
+				<table>
+				<thead>
+					<tr><th>Symbol</th><th>Changes</th></tr>
+				</thead>
+				<tr ng-repeat = "quote in vm.stockQuotes.query.results.quote">
+					<td>{{quote.symbol}}</td>
+					<td>{{quote.Change}}</td>
+				</tr>
+			</table>
+			</div>
 		</div>
-		<!-- main app module -->
+
+		<!-- Modules and Controllers -->
 		<script src = "app/app.module.js"></script>
-		<!-- app.stockCore module -->
 		<script src = "app/stockCore/stockCore.module.js"></script>
-		<!-- app.stockList module -->
+		<script src = "app/stockCore/stockCore.controller.js"></script>
+		<script src = "app/stockCore/stockCore.constant.js"></script>
 		<script src = "app/stockList/stockList.module.js"></script>
-		<!-- app.stockDetails module -->
+		<script src = "app/stockList/stockList.controller.js"></script>
 		<script src = "app/stockDetails/stockDetails.module.js"></script>
+		<script src = "app/stockDetails/stockDetails.controller.js"></script>
 	</body>
 </html>

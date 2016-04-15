@@ -1,2 +1,5 @@
-angular
-	.module("app.stockDetails", []);
+(function() {
+  'use strict';
+
+  angular.module('app.stockDetails', []);
+})();

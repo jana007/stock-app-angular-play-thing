@@ -1,2 +1,5 @@
-angular
-	.module("app.stockList", []); // instantiate dependency first!!
+(function() {
+  'use strict';
+
+  angular.module('app.stockList', []);
+})();
