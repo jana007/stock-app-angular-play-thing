@@ -3,7 +3,7 @@
 
   angular.module('app.stockCore', [
     // Angular Modules
-    // 'ngRoute',
+    'ngRoute',
 
     // 3rd Party Modules
     // 'breeze.angular',

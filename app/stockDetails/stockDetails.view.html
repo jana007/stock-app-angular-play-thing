@@ -1,0 +1,20 @@
+<a href="#/Quotes">Back to Stock Quotes List</a>
+<hr />
+<table>
+    <tr>
+      <td>Symbol</td>
+      <td>{{vm.stockQuote.query.results.quote.Symbol}}</td>
+    </tr>
+    <tr>
+      <td>Company Name</td>
+      <td>{{vm.stockQuote.query.results.quote.Name}}</td>
+    </tr>
+    <tr>
+      <td>Change</td>
+      <td>{{vm.stockQuote.query.results.quote.Change | currency}}</td>
+    </tr>
+    <tr>
+      <td>Closed</td>
+      <td>{{vm.stockQuote.query.results.quote.LastTradePriceOnly | currency}}</td>
+    </tr>
+</table>

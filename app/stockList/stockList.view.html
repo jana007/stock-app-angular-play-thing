@@ -1,0 +1,16 @@
+<select ng-model="vm.upOrDown">
+  <option value="">All</option>
+  <option value="+">Up</option>
+  <option value="-">Down</option>
+</select>
+
+<table>
+  <thead>
+      <tr><th>Symbol</th><th>Change</th></tr>
+  </thead>
+  <thead>
+      <tr ng-repeat="quote in vm.stockQuotes.query.results.quote | upOrDown: vm.upOrDown">
+          <td><a ng-href="#/Quote?Symbol={{quote.symbol}}">{{quote.symbol}}</a></td><td>{{quote.Change}}</td>
+      </tr>
+  </thead>
+</table>
